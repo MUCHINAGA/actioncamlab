@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOUR-SITE-URL.com/index.html</loc>
+    <loc>https://muchinaga.github.io/actioncamlab/index.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOUR-SITE-URL.com/privacy.html</loc>
+    <loc>https://muchinaga.github.io/actioncamlab/privacy.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://YOUR-SITE-URL.com/contact.html</loc>
+    <loc>https://muchinaga.github.io/actioncamlab/contact.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://YOUR-SITE-URL.com/about.html</loc>
+    <loc>https://muchinaga.github.io/actioncamlab/about.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
