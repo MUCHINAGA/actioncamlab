@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | ActionCamLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Barlow:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root { --orange:#FF6B00; --dark:#0F1014; --border:#E8E8E8; --text:#1A1A1A; --muted:#666; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Noto Sans JP',sans-serif; background:#F7F7F5; color:var(--text); }
+header { background:var(--dark); color:white; padding:0 1.5rem; }
+.header-inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:56px; }
+.logo { font-family:'Barlow',sans-serif; font-weight:800; font-size:20px; color:white; text-decoration:none; }
+.logo span { color:var(--orange); }
+nav a { color:#aaa; text-decoration:none; font-size:13px; margin-left:20px; }
+nav a:hover { color:white; }
+.page-hero { background:var(--dark); color:white; padding:2.5rem 1.5rem; text-align:center; }
+.page-hero h1 { font-family:'Barlow',sans-serif; font-weight:800; font-size:28px; }
+.page-hero p { font-size:14px; color:#aaa; margin-top:8px; }
+main { max-width:640px; margin:0 auto; padding:2.5rem 1.5rem; }
+.form-card { background:white; border-radius:12px; border:1px solid var(--border); padding:2rem; }
+.form-group { margin-bottom:1.25rem; }
+label { display:block; font-size:13px; font-weight:700; margin-bottom:6px; }
+input, textarea, select { width:100%; padding:10px 14px; border:1.5px solid var(--border); border-radius:8px; font-size:14px; font-family:'Noto Sans JP',sans-serif; outline:none; transition:border-color 0.15s; background:white; color:var(--text); }
+input:focus, textarea:focus, select:focus { border-color:var(--orange); }
+textarea { min-height:140px; resize:vertical; }
+.required { color:var(--orange); font-size:12px; margin-left:4px; }
+.submit-btn { width:100%; padding:13px; background:var(--orange); color:white; border:none; border-radius:8px; font-size:15px; font-weight:700; font-family:'Noto Sans JP',sans-serif; cursor:pointer; transition:opacity 0.15s; margin-top:0.5rem; }
+.submit-btn:hover { opacity:0.85; }
+.note { font-size:12px; color:var(--muted); line-height:1.7; margin-top:1rem; }
+.success-msg { display:none; background:#E6F8F0; border:1px solid #90D8B5; border-radius:8px; padding:16px; font-size:14px; color:#1A6640; margin-top:1rem; }
+footer { background:var(--dark); color:#888; margin-top:4rem; padding:2rem 1.5rem; }
+.footer-inner { max-width:900px; margin:0 auto; }
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:1rem; }
+.footer-links a { color:#888; text-decoration:none; font-size:13px; }
+.footer-links a:hover { color:white; }
+.footer-note { font-size:12px; color:#666; line-height:1.8; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Action<span>Cam</span>Lab</a>
+    <nav>
+      <a href="index.html">ランキング</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>お問い合わせ</h1>
+  <p>ご質問・掲載内容の誤り・ご意見などはこちらからお送りください。</p>
+</div>
+
+<main>
+<div class="form-card">
+  <div class="form-group">
+    <label>お名前 <span class="required">必須</span></label>
+    <input type="text" id="name" placeholder="山田 太郎">
+  </div>
+  <div class="form-group">
+    <label>メールアドレス <span class="required">必須</span></label>
+    <input type="email" id="email" placeholder="example@email.com">
+  </div>
+  <div class="form-group">
+    <label>お問い合わせ種別</label>
+    <select id="type">
+      <option>掲載内容について</option>
+      <option>商品・価格の誤りについて</option>
+      <option>掲載依頼・広告について</option>
+      <option>その他</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>お問い合わせ内容 <span class="required">必須</span></label>
+    <textarea id="message" placeholder="お問い合わせ内容を入力してください。"></textarea>
+  </div>
+  <button class="submit-btn" onclick="handleSubmit()">送信する</button>
+  <div class="success-msg" id="successMsg">
+    ✅ お問い合わせを受け付けました。内容を確認のうえ、ご返信いたします（返信まで数日お時間をいただく場合があります）。
+  </div>
+  <p class="note">
+    ※ いただいた個人情報は、お問い合わせへの対応のみに使用します。詳しくは<a href="privacy.html" style="color:var(--orange)">プライバシーポリシー</a>をご覧ください。
+  </p>
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">ランキング</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="about.html">このサイトについて</a>
+    </div>
+    <p class="footer-note">© 2026 ActionCamLab — Amazonアソシエイト・プログラム参加サイト</p>
+  </div>
+</footer>
+
+<script>
+function handleSubmit() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  if (!name || !email || !msg) { alert('必須項目を入力してください。'); return; }
+  document.getElementById('successMsg').style.display = 'block';
+}
+</script>
+</body>
+</html>
