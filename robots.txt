@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muchinaga.github.io/actioncamlab/sitemap.xml
